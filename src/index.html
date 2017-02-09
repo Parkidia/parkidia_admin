@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+    <link rel="stylesheet" href="css/foundation-icons/foundation-icons.css">
+    <title>Parkidia Admin</title>
+</head>
+
+<body>
+	
+	<!-- Titre de la page -->
+	<div class="row">
+		<div class="large-12 large-centered columns titre">
+			<h2 class="text-center">Administration Parkidia <small>Version 0.1</small></h2>
+		</div>
+	</div>
+	
+	<!-- Formulaire création parking -->
+	<div class="row">
+		<div class="large-12 large-centered columns formulaire">
+			<!-- Titre du formulaire création parking -->
+			<h4 class="titre-parking">Création d'un parking :</h4>
+			
+			<form>
+				<!-- Ligne formulaire nom du parking -->
+				<div class="row collapse ligne-formulaire">
+					<div class="small-1 columns">
+					    <center><span class="prefix"><i class="fi-info"></i></span></center>
+					</div>
+					<div class="small-11 columns">
+              			<input type="text" placeholder="Nom du parking">
+            		</div>
+				</div>
+				
+				<!-- Ligne formulaire localisation du parking -->
+				<div class="row collapse ligne-formulaire">
+					<div class="small-1 columns">
+					    <center><span class="prefix"><i class="fi-map"></i></span></center>
+					</div>
+					<div class="small-5 columns">
+              			<input type="text" placeholder="Longitude">
+            		</div>
+            		<div class="small-5 columns">
+              			<input type="text" placeholder="Latitude">
+            		</div>
+				</div>		
+				
+				<!-- Bouton de validation de création parking -->
+				<div class="row ligne-formulaire">
+					<div class="small-2 small-centered columns">
+              			<center><div class="button button-valider-parking">VALIDER</div></center>
+            		</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	<!-- Formulaire création d'une place -->
+	<div class="row">
+		<div class="large-12 large-centered columns formulaire">
+			<!-- Titre du formulaire création place -->
+			<h4 class="titre-parking">Création d'une place :</h4>
+			
+			<form>
+			
+				<!-- Ligne formulaire clé du parking -->
+				<div class="row collapse ligne-formulaire">
+					<div class="small-1 columns">
+						<center>
+							<span class="prefix"><i class="fi-key"></i></span>
+						</center>
+					</div>
+					
+					<div class="small-1 columns uuid-zone">
+						<input type="text" maxlength="8" size="8">
+					</div>
+					
+					<div class="small-1 columns uuid-zone">
+						<input type="text" maxlength="4" size="4">
+					</div>
+					
+					<div class="small-1 columns uuid-zone">
+						<input type="text" maxlength="4" size="4">
+					</div>
+					
+					<div class="small-1 columns uuid-zone">
+						<input type="text" maxlength="4" size="4">
+					</div>
+					
+					<div class="small-2 columns uuid-zone float-left">
+						<input type="text" maxlength="12" size="12">
+					</div>
+				</div>
+			
+				<!-- Ligne formulaire nom de la place -->
+				<div class="row collapse ligne-formulaire">
+					<div class="small-1 columns">
+						<center>
+							<span class="prefix"><i class="fi-info"></i></span>
+						</center>
+					</div>
+					
+					<div class="small-11 columns">
+						<input type="text" placeholder="Nom de la place">
+					</div>
+				</div>
+				
+				<!-- Ligne formulaire place handicapée (switch radio) -->
+				<div class="row ligne-formulaire">
+					<div class="small-2 columns">
+						<p class="title-handicap">Place handicapée : </p>
+					</div>
+					
+					<div class="small-10 columns">
+						<div class="switch large">
+							<input class="switch-input" id="handicap" type="checkbox" name="handicap">
+							<label class="switch-paddle" for="handicap">
+								<span class="switch-active" aria-hidden="true">Oui</span>
+								<span class="switch-inactive" aria-hidden="true">Non</span>
+							</label>
+						</div>
+					</div>	
+				</div>
+				
+				<!-- Ligne formulaire localisation de la place -->
+				<div class="row collapse ligne-formulaire">
+					<div class="small-1 columns">
+					    <center><span class="prefix"><i class="fi-map"></i></span></center>
+					</div>
+					<div class="small-5 columns">
+              			<input type="text" placeholder="Longitude">
+            		</div>
+            		<div class="small-5 columns">
+              			<input type="text" placeholder="Latitude">
+            		</div>
+				</div>
+				
+				<!-- Ligne formulaire orientation de la place -->
+				<div class="row collapse ligne-formulaire">
+					<div class="small-1 columns">
+					    <center><span class="prefix"><i class="fi-loop"></i></span></center>
+					</div>
+					<div class="small-5 columns float-left">
+              			<input type="text" placeholder="Orientation">
+            		</div>
+				</div>
+				
+				<!-- Bouton de validation de création d'une place -->
+				<div class="row ligne-formulaire">
+					<div class="small-2 small-centered columns">
+              			<center><div class="button button-valider-place">VALIDER</div></center>
+            		</div>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+	
+	<br>
+	<br>
+	
+	<script src="js/functions.js"></script>
+</body>
+</html>

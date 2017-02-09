@@ -1,0 +1,40 @@
+/* Titre de la page */
+.titre {
+	margin-top: 2%;
+}
+
+/* Titre de "création d'un parking" */
+.titre-parking {
+	
+}
+
+/* Représente un formulaire de création */
+.formulaire {
+	border-radius: 5px;
+  	border: 1px solid #ccc;
+  	padding: 15px;
+	margin-top: 30px;
+}
+
+/* Les "prefix" des formulaires */
+.formulaire i {
+	font-size: 30px;
+  	line-height: 42px;
+  	color: #999;
+}
+
+/* Ligne du formulaire parking */
+.ligne-formulaire {
+	margin-top: 25px;
+}
+
+/* Permet de reposition le titre "place handicapée :" un peu trop vers le haut */
+.title-handicap {
+	line-height: 40px;
+}
+
+/* Zone de saisie uuid (portion) */
+.uuid-zone {
+	margin-right: 20px;
+	text-align: center; 
+}

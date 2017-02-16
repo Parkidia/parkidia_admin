@@ -32,7 +32,7 @@
 					    <center><span class="prefix"><i class="fi-info"></i></span></center>
 					</div>
 					<div class="small-11 columns">
-              			<input type="text" placeholder="Nom du parking">
+              			<input type="text" placeholder="Nom du parking" id="nom_parking" name="nom_parking">
             		</div>
 				</div>
 				
@@ -42,10 +42,10 @@
 					    <center><span class="prefix"><i class="fi-map"></i></span></center>
 					</div>
 					<div class="small-5 columns">
-              			<input type="text" placeholder="Longitude">
+              			<input type="text" placeholder="Longitude" id="longitude" name="longitude">
             		</div>
             		<div class="small-5 columns">
-              			<input type="text" placeholder="Latitude">
+              			<input type="text" placeholder="Latitude" id="latitude" name="latitude">
             		</div>
 				</div>		
 				
@@ -58,6 +58,27 @@
 			</form>
 		</div>
 	</div>
+
+	<!-- Erreur (callout) formulaire création parking -->
+	<div class="row callout_erreur_parking">
+		<div class="large-12 large-centered">
+			<div class="alert callout">
+				<h5>ERREUR : </h5>
+				<p id="erreur_parking">NULL</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Valide (callout) formulaire création parking -->
+	<div class="row callout_valide_parking">
+		<div class="large-12 large-centered">
+			<div class="success callout">
+				<h5>Félicitation : </h5>
+				<p id="valide_parking">NULL</p>
+			</div>
+		</div>
+	</div>
+
 	
 	<!-- Formulaire création d'une place -->
 	<div class="row">
@@ -159,10 +180,37 @@
 			</form>
 		</div>
 	</div>
+
+	<!-- Erreur (callout) formulaire création place -->
+	<div class="row callout_erreur_place">
+		<div class="large-12 large-centered">
+			<div class="alert callout" data-closable="slide-out-right">
+				<h5>ERREUR : </h5>
+				<p id="erreur_place">NULL</p>
+				<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Valide (callout) formulaire création place -->
+	<div class="row callout_valide_place">
+		<div class="large-12 large-centered">
+			<div class="success callout">
+			<h5>Félicitation : </h5>
+			<p id="valide_place">NULL</p>
+		</div>
+	</div>
+	</div>
 	
 	<br>
 	<br>
 	
 	<script src="js/functions.js"></script>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/vendor/what-input.js"></script>
+	<script src="js/vendor/foundation.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>

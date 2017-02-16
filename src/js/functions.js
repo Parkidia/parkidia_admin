@@ -33,18 +33,12 @@ bouton_valider_parking.click(function(ev) {
 	// Envoi de la requête
     $.ajax({
                type: 'POST',
-               url: 'localhost:8080/GestionParking_war_exploded/' + nom_parking + '/' + latitude + '/' + longitude,
-               dataType: 'json',
-               contentType: 'application/json; charset=utf-8',
-               success: function(response) {
-				   valide_callout_parking.show();
-                   valide_parking.text('Le parking ' + nom_parking + ' est créé');
-               },
-               error: function(error) {
-                   erreur_callout_parking.show();
-                   erreur_parking.text('Problème avec le web service');
-               }
+               url: 'http://localhost:8080/GestionParking_war_exploded/parking/' + nom_parking + '/' + latitude + '/' + longitude,
+               contentType: 'text/plain',
+               dataType: "text",
            });
+    valide_callout_parking.show();
+    valide_parking.text('Le parking ' + nom_parking + ' est créé');
 
 });
 

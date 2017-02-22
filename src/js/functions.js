@@ -43,15 +43,40 @@ bouton_valider_parking.click(function(ev) {
         return;
 	}
 
-    $.post( 'http://localhost:8080/GestionParking_war_exploded/parking/' + nom_parking + '/' + latitude + '/' + longitude ,function( data ) {
+    /* $.post( 'http://localhost:8080/GestionParking_war_exploded/parking/' + nom_parking + '/' + latitude + '/' + longitude ,function( data ) {
 
     });
 
-    valide_callout_parking.show();
-    valide_callout_parking.text('Le parking ' + nom_parking + ' est créé');
+
+
+*/
+    // Solution 1
+/*    $.ajax({
+               type: 'POST',
+               url: 'http://localhost:8080/GestionParking_war_exploded/parking/' + nom_parking + '/' + latitude + '/' + longitude,
+               dataType: 'json',
+               success: function () {
+                   valide_callout_parking.show();
+                   valide_callout_parking.text('Le parking ' + nom_parking + ' est créé');
+               },
+               error: function (jqXHR, textStatus, errorThrown) {
+                   alert("jqXHR= " + jqXHR + ", textStatus= " + textStatus + ", errorThrown= " + errorThrown)
+               }
+           });
+*/
+
+    $.post('http://localhost:8080/GestionParking_war_exploded/parking/' + nom_parking + '/' + latitude + '/' + longitude,
+           function(data) {
+        alert("cool");
+    }, "Json")
+        .fail(function (xhr, status, error) {
+            alert("Xhr : " + xhr.status + " Status : " + status + " error : " + error);
+        });
+
 
     init_listeparking();
 
+    return false;
 });
 
 bouton_valider_place.click(function(ev) {
